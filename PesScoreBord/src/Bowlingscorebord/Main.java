@@ -1,4 +1,4 @@
-package hellofx;
+package Bowlingscorebord;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -18,9 +18,10 @@ public class Main extends Application {
         Controller controller = lader.getController();
         
         // hoofdvenster
-        Scene scene = new Scene(root, 800, 600);
+        Scene scene = new Scene(root, 720, 405);
         stage.setScene(scene);
-        stage.setTitle("Prefab FXML applicatie");
+        stage.setTitle("Scorebord Canadian bowling");
+        stage.setResizable(false);
         stage.show();
     }
 
