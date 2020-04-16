@@ -18,7 +18,7 @@ public class Main extends Application {
         Controller controller = lader.getController();
         
         // hoofdvenster
-        Scene scene = new Scene(root, 720, 405);
+        Scene scene = new Scene(root, 1280, 720);
         stage.setScene(scene);
         stage.setTitle("Scorebord Canadian bowling");
         stage.setResizable(false);
