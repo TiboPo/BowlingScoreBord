@@ -49,17 +49,17 @@
             <Font size="21.0" />
          </font>
       </Text>
-      <Label layoutX="311.0" layoutY="45.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s1f1w1" layoutX="311.0" layoutY="45.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="311.0" layoutY="76.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s1f1w2" layoutX="311.0" layoutY="76.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="347.0" layoutY="84.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s1f1w3" layoutX="347.0" layoutY="76.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
@@ -69,47 +69,47 @@
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="388.0" layoutY="43.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s1f2w1" layoutX="388.0" layoutY="43.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="388.0" layoutY="76.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s1f2w2" layoutX="388.0" layoutY="76.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="424.0" layoutY="84.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s1f2w3" layoutX="424.0" layoutY="76.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="462.0" layoutY="46.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s1f3w1" layoutX="462.0" layoutY="46.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="462.0" layoutY="76.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s1f3w2" layoutX="462.0" layoutY="76.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="499.0" layoutY="76.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s1f3w3" layoutX="499.0" layoutY="76.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="537.0" layoutY="46.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s1f4w1" layoutX="537.0" layoutY="46.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="537.0" layoutY="76.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s1f4w2" layoutX="537.0" layoutY="76.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="573.0" layoutY="76.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s1f4w3" layoutX="573.0" layoutY="76.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
@@ -129,17 +129,17 @@
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="610.0" layoutY="43.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s1f5w1" layoutX="610.0" layoutY="43.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="610.0" layoutY="76.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s1f5w2" layoutX="610.0" layoutY="76.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="648.0" layoutY="76.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s1f5w3" layoutX="648.0" layoutY="76.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
@@ -149,7 +149,7 @@
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="311.0" layoutY="135.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s2f1w1" layoutX="311.0" layoutY="135.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
@@ -159,27 +159,27 @@
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="311.0" layoutY="167.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s2f1w2" layoutX="311.0" layoutY="167.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="347.0" layoutY="167.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s2f1w3" layoutX="347.0" layoutY="167.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="388.0" layoutY="135.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s2f2w1" layoutX="388.0" layoutY="135.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="388.0" layoutY="167.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s2f2w2" layoutX="388.0" layoutY="167.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="424.0" layoutY="167.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s2f2w3" layoutX="424.0" layoutY="167.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
@@ -189,17 +189,17 @@
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="462.0" layoutY="135.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s2f3w1" layoutX="462.0" layoutY="135.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="462.0" layoutY="167.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s2f3w2" layoutX="462.0" layoutY="167.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="499.0" layoutY="167.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s2f3w3" layoutX="499.0" layoutY="167.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
@@ -209,17 +209,17 @@
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="537.0" layoutY="135.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s2f4w1" layoutX="537.0" layoutY="135.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="537.0" layoutY="167.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s2f4w2" layoutX="537.0" layoutY="167.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="573.0" layoutY="167.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s2f4w3" layoutX="573.0" layoutY="167.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
@@ -229,17 +229,17 @@
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="610.0" layoutY="135.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s2f5w1" layoutX="610.0" layoutY="135.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="610.0" layoutY="167.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s2f5w2" layoutX="610.0" layoutY="167.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="648.0" layoutY="167.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s2f5w3" layoutX="648.0" layoutY="167.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
@@ -249,32 +249,32 @@
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="688.0" layoutY="43.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s1f6w1" layoutX="688.0" layoutY="43.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="688.0" layoutY="76.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s1f6w2" layoutX="688.0" layoutY="76.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="724.0" layoutY="76.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s1f6w3" layoutX="724.0" layoutY="76.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="688.0" layoutY="135.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s2f6w1" layoutX="688.0" layoutY="135.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="688.0" layoutY="167.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s2f6w2" layoutX="688.0" layoutY="167.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="724.0" layoutY="167.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s2f6w3" layoutX="724.0" layoutY="167.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
@@ -284,17 +284,17 @@
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="762.0" layoutY="135.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s2f7w1" layoutX="762.0" layoutY="135.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="762.0" layoutY="167.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s2f7w2" layoutX="762.0" layoutY="167.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="799.0" layoutY="167.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s2f7w3" layoutX="799.0" layoutY="167.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
@@ -304,57 +304,57 @@
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="724.0" layoutY="46.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s1" layoutX="724.0" layoutY="46.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="762.0" layoutY="46.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s1f7w1" layoutX="762.0" layoutY="46.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="762.0" layoutY="76.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s1f7w2" layoutX="762.0" layoutY="76.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="799.0" layoutY="76.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s1f7w3" layoutX="799.0" layoutY="76.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="799.0" layoutY="46.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s1" layoutX="799.0" layoutY="46.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="838.0" layoutY="46.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s1f8w1" layoutX="838.0" layoutY="46.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="838.0" layoutY="76.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s1f8w2" layoutX="838.0" layoutY="76.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="875.0" layoutY="76.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s1f8w3" layoutX="875.0" layoutY="76.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="838.0" layoutY="135.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s2f8w1" layoutX="838.0" layoutY="135.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="838.0" layoutY="167.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s2f8w2" layoutX="838.0" layoutY="167.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="875.0" layoutY="167.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s2f8w3" layoutX="875.0" layoutY="167.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
@@ -364,17 +364,17 @@
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="913.0" layoutY="135.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s2f9w1" layoutX="913.0" layoutY="135.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="913.0" layoutY="167.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s2f9w2" layoutX="913.0" layoutY="167.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="950.0" layoutY="167.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s2f9w3" layoutX="950.0" layoutY="167.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
@@ -384,42 +384,42 @@
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="875.0" layoutY="46.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s1" layoutX="875.0" layoutY="46.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="913.0" layoutY="46.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s1f9w1" layoutX="913.0" layoutY="46.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="913.0" layoutY="76.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s1f9w2" layoutX="913.0" layoutY="76.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="950.0" layoutY="76.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s1f9w3" layoutX="950.0" layoutY="76.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="950.0" layoutY="46.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s1" layoutX="950.0" layoutY="46.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="989.0" layoutY="43.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s1" layoutX="989.0" layoutY="43.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="1026.0" layoutY="43.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s1" layoutX="1026.0" layoutY="43.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="1066.0" layoutY="46.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s1" layoutX="1066.0" layoutY="46.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
@@ -439,47 +439,47 @@
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="989.0" layoutY="167.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s2f10w1" layoutX="989.0" layoutY="167.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="1026.0" layoutY="167.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s2f10w2" layoutX="1026.0" layoutY="167.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="1066.0" layoutY="167.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s2f10w3" layoutX="1066.0" layoutY="167.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="989.0" layoutY="76.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s1f10w1" layoutX="989.0" layoutY="76.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="1026.0" layoutY="76.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s1f10w2" layoutX="1026.0" layoutY="76.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="1066.0" layoutY="76.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s1f10w3" layoutX="1066.0" layoutY="76.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="311.0" layoutY="229.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s3f1w1" layoutX="311.0" layoutY="229.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="311.0" layoutY="266.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s3f1w2" layoutX="311.0" layoutY="266.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="347.0" layoutY="266.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s3f1w3" layoutX="347.0" layoutY="266.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
@@ -489,17 +489,17 @@
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="388.0" layoutY="229.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s3f2w1" layoutX="388.0" layoutY="229.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="388.0" layoutY="266.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s3f2w2" layoutX="388.0" layoutY="266.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="424.0" layoutY="266.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s3f2w3" layoutX="424.0" layoutY="266.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
@@ -509,12 +509,12 @@
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="462.0" layoutY="229.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s3f3w1" layoutX="462.0" layoutY="229.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="462.0" layoutY="266.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s3f3w2" layoutX="462.0" layoutY="266.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
@@ -524,22 +524,22 @@
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="499.0" layoutY="266.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s3f3w3" layoutX="499.0" layoutY="266.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="537.0" layoutY="229.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s3f4w1" layoutX="537.0" layoutY="229.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="537.0" layoutY="266.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s3f4w2" layoutX="537.0" layoutY="266.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="573.0" layoutY="266.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
+      <Label fx:id="s3f4w3" layoutX="573.0" layoutY="266.0" prefHeight="28.0" prefWidth="29.0" text="00" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
