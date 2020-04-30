@@ -13,7 +13,7 @@ import java.util.Scanner;
 public class Controller {
     private Spel model;
     private Input input;
-    
+    private String tkegel1,tkegel2,tkegel3,tkegel4,tkegel5;
     @FXML
     private ResourceBundle resources;
 
@@ -728,14 +728,15 @@ public class Controller {
     }
 
     public void setModel(Spel model) {
+        main();
         this.model = model;
         Timertask timertask = new Timertask(model,this);
         Timer t = new Timer();
-        t.scheduleAtFixedRate(timertask,0,50);
+        t.scheduleAtFixedRate(timertask,0,10000);
     }
     public void update() {
         //System.out.println("controller update");
-        main();
+       
     }
     public void bowl(KeyEvent e){
         switch(e.getCode()){
@@ -761,9 +762,46 @@ public class Controller {
     Scanner myScanner = new Scanner(System.in);
     
     System.out.println("kegel 1 ? ");
-    String tkegel1 = myScanner.nextLine();
+     tkegel1 = myScanner.nextLine();
+       
+     
+    System.out.println("kegel 2 ? ");
+     tkegel2 = myScanner.nextLine();
     
+    System.out.println("kegel 3 ? ");
+     tkegel3 = myScanner.nextLine();
+    
+    System.out.println("kegel 4 ? ");
+     tkegel4 = myScanner.nextLine();
+    
+    System.out.println("kegel 5 ? ");
+     tkegel5 = myScanner.nextLine();
     System.out.println(tkegel1);
     }
+
+    public String getTkegel1() {
+        return tkegel1;
+    }
+
+    public String getTkegel2() {
+        return tkegel2;
+    }
+
+    public String getTkegel3() {
+        return tkegel3;
+    }
+
+    public String getTkegel4() {
+        return tkegel4;
+    }
+
+    public String getTkegel5() {
+        return tkegel5;
+    }
+
+    public ImageView getSnelheid() {
+        return snelheid;
+    }
+    
 }
         
