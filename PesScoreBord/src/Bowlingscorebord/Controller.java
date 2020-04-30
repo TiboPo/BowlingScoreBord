@@ -8,9 +8,11 @@ import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
+import java.util.Scanner;
 
 public class Controller {
     private Spel model;
+    private Input input;
     
     @FXML
     private ResourceBundle resources;
@@ -733,7 +735,7 @@ public class Controller {
     }
     public void update() {
         //System.out.println("controller update");
-        
+        main();
     }
     public void bowl(KeyEvent e){
         switch(e.getCode()){
@@ -755,5 +757,13 @@ public class Controller {
                 break;
         }
 }
+    public void main(){
+    Scanner myScanner = new Scanner(System.in);
+    
+    System.out.println("kegel 1 ? ");
+    String tkegel1 = myScanner.nextLine();
+    
+    System.out.println(tkegel1);
+    }
 }
         
