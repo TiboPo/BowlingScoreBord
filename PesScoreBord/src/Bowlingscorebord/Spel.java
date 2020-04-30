@@ -61,6 +61,6 @@ public class Spel {
         this.snelheid = snelheid;
     }  
     public void tick() {
-        
+       // System.out.println("tick spel");
     }  
 }
