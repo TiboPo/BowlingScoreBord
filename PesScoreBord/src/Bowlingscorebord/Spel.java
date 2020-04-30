@@ -7,6 +7,7 @@ package Bowlingscorebord;
 
 import java.util.ArrayList;
 
+
 /**
  *
  * @author dries
@@ -16,6 +17,7 @@ public class Spel {
     private ArrayList<Speler> spelers;
     private ArrayList<Kegel> kegels;
     private double snelheid;
+    private Controller input;
 
     public Spel() {
         actief = false;
@@ -32,12 +34,18 @@ public class Spel {
         kegels.add(kegel3);
         kegels.add(kegel4);
         kegels.add(kegel5);
+        
     }
 
     public boolean isActief() {
         return actief;
     }
 
+    
+    public void addSpeler(String naam){
+        Speler speler = new Speler(naam);
+        spelers.add(speler);
+    }
     public ArrayList<Speler> getSpelers() {
         return spelers;
     }
@@ -47,6 +55,7 @@ public class Spel {
     }
 
     public void startSpel() {
+        
         actief = true;
     }
     
@@ -62,5 +71,6 @@ public class Spel {
     }  
     public void tick() {
        // System.out.println("tick spel");
-    }  
+    }
+    
 }

@@ -13,7 +13,8 @@ import java.util.Scanner;
 public class Controller {
     private Spel model;
     private Input input;
-    private String tkegel1,tkegel2,tkegel3,tkegel4,tkegel5;
+    private String tkegel;
+    private int tkegel1,tkegel2,tkegel3,tkegel4,tkegel5;
     @FXML
     private ResourceBundle resources;
 
@@ -724,11 +725,12 @@ public class Controller {
     
     void initialize() {
         bord.setFocusTraversable(true);
-        bord.setOnKeyPressed(this::bowl);
+      
     }
 
     public void setModel(Spel model) {
-        main();
+        //model.startSpel();
+        //preBowl();
         this.model = model;
         Timertask timertask = new Timertask(model,this);
         Timer t = new Timer();
@@ -736,66 +738,64 @@ public class Controller {
     }
     public void update() {
         //System.out.println("controller update");
-       
+         
     }
-    public void bowl(KeyEvent e){
-        switch(e.getCode()){
-            case LEFT:
-                System.out.println("links");
-                update();
-                break;
-            case RIGHT:
-                System.out.println("rechts");
-                update();
-                break;
-            case UP:
-                System.out.println("boven");
-                update();
-                break;
-            case DOWN:
-                System.out.println("beneden");
-                update();
-                break;
-        }
-}
-    public void main(){
+  public void preBowl(){
+  System.out.println("hoeveel spelers (max 6) ");
+   Scanner mScanner = new Scanner(System.in);
+   String l = mScanner.nextLine();
+  int hvlSpeler =   Integer.parseInt(l);
+    for (int i = 0; i < hvlSpeler; i++) {
+       System.out.println("naam van speler  ?");
+        String nieuwSpeler = mScanner.nextLine();
+        model.addSpeler(nieuwSpeler);
+    }
+   }
+    
+    public void bowl(){
+    System.out.println("kegel 1 ? ");
     Scanner myScanner = new Scanner(System.in);
     
     System.out.println("kegel 1 ? ");
-     tkegel1 = myScanner.nextLine();
-       
+    tkegel = myScanner.nextLine();
+    tkegel1 =   Integer.parseInt(tkegel);
      
     System.out.println("kegel 2 ? ");
-     tkegel2 = myScanner.nextLine();
-    
+     tkegel = myScanner.nextLine();
+    tkegel2 =   Integer.parseInt(tkegel);
+     
     System.out.println("kegel 3 ? ");
-     tkegel3 = myScanner.nextLine();
-    
+     tkegel = myScanner.nextLine();
+    tkegel3 =   Integer.parseInt(tkegel);
+     
     System.out.println("kegel 4 ? ");
-     tkegel4 = myScanner.nextLine();
-    
+     tkegel = myScanner.nextLine();
+    tkegel4 =   Integer.parseInt(tkegel);
+     
     System.out.println("kegel 5 ? ");
-     tkegel5 = myScanner.nextLine();
-    System.out.println(tkegel1);
+     tkegel = myScanner.nextLine();
+    tkegel5 =   Integer.parseInt(tkegel);
+     System.out.println(tkegel1);
+    
     }
 
-    public String getTkegel1() {
+    public int getTkegel1() {
         return tkegel1;
     }
 
-    public String getTkegel2() {
+    public int getTkegel2() {
         return tkegel2;
     }
 
-    public String getTkegel3() {
+    public int getTkegel3() {
         return tkegel3;
     }
 
-    public String getTkegel4() {
+    public int getTkegel4() {
         return tkegel4;
     }
 
-    public String getTkegel5() {
+    public int getTkegel5() {
         return tkegel5;
     }
 
