@@ -750,9 +750,25 @@ public class Controller {
     @FXML
     private Label snelheidLabel;
 
-    
+    @FXML
+    private Label eindScore1;
+
+    @FXML
+    private Label eindScore2;
+
+    @FXML
+    private Label eindScore3;
+
+    @FXML
+    private Label eindScore4;
+
+    @FXML
+    private Label eindScore5;
+
+    @FXML
+    private Label eindScore6;
+
     Spel model;
-    Input input;
     
     @FXML
     void initialize() {
@@ -801,13 +817,28 @@ public class Controller {
         model.resetSpel();
     }
     public void frameUpdate() {
-        if (input.isActief() == false && model.getSpelers().size() == 6) {
-            snelheidLabel.setText(model.getSnelheid() + " m/s");
-            s1f1w1.setText(model.getSpelers().get(0).getWorpen().get(0).toString());
-            s1f1w2.setText(model.getSpelers().get(0).getWorpen().get(1).toString()); 
-            s1f1w3.setText(model.getSpelers().get(0).getWorpen().get(2).toString());
-            s1f1.setText(model.getSpelers().get(0).getWorpen().get(3).toString());
-            s1.setText(Integer.toString(model.getSpelers().get(0).getTotaalscore()));
+        if (model.getInput().isActief() == false && model.getInput().getTijd() > 0 && model.getSpelers().size() == 6) {
+        snelheidLabel.setText(model.getSnelheidTekst() + " m/s");
+        if (model.getSpelers().get(0).getWorpen().size() == 1) {
+        s1f1w1.setText(model.getSpelers().get(0).getWorpen().get(0).toString());
+        }
+        if (model.getSpelers().get(0).getWorpen().size() == 2) {
+        s1f1w2.setText(model.getSpelers().get(0).getWorpen().get(1).toString());
+        }
+        if (model.getSpelers().get(0).getWorpen().size() == 3) {
+        s1f1w3.setText(model.getSpelers().get(0).getWorpen().get(2).toString());
+        }
+        if (model.getSpelers().get(0).getWorpen().size() == 4) {
+        s1f1.setText(model.getSpelers().get(0).getWorpen().get(3).toString());
+        }
+        eindScore1.setText(Integer.toString(model.getSpelers().get(0).getTotaalscore()));
+        } else {
+            snelheidLabel.setText("");
+            s1f1w1.setText("");
+            s1f1w2.setText("");
+            s1f1w3.setText("");
+            s1f1.setText("");
+            eindScore1.setText("");
         }
     }
 }

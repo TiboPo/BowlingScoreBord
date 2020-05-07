@@ -1319,5 +1319,35 @@
             <Font size="26.0" />
          </font>
       </Label>
+      <Label fx:id="eindScore1" alignment="CENTER" layoutX="1098.0" layoutY="45.0" prefHeight="68.0" prefWidth="110.0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Label fx:id="eindScore2" alignment="CENTER" layoutX="1098.0" layoutY="137.0" prefHeight="68.0" prefWidth="110.0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Label fx:id="eindScore3" alignment="CENTER" layoutX="1098.0" layoutY="227.0" prefHeight="68.0" prefWidth="110.0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Label fx:id="eindScore4" alignment="CENTER" layoutX="1098.0" layoutY="318.0" prefHeight="68.0" prefWidth="110.0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Label fx:id="eindScore5" alignment="CENTER" layoutX="1098.0" layoutY="411.0" prefHeight="68.0" prefWidth="110.0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Label fx:id="eindScore6" alignment="CENTER" layoutX="1098.0" layoutY="505.0" prefHeight="68.0" prefWidth="110.0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

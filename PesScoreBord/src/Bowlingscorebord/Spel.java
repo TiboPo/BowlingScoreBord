@@ -5,9 +5,8 @@
  */
 package Bowlingscorebord;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
-import org.sintef.jarduino.JArduino;
-
 
 /**
  *
@@ -22,13 +21,13 @@ public class Spel {
     private int kegel5;
     private int score;
     private double snelheid;
+    private String snelheidTekst;
     private Input input;
+    private static DecimalFormat df = new DecimalFormat("#.##");
 
     public Spel() {
         snelheid = 0.0;
-        input = new Input("COM3");
-        JArduino arduino = new Input("COM3");
-        arduino.runArduinoProcess();
+        input = new Input();
         spelers = new ArrayList();
     }
 
@@ -50,14 +49,19 @@ public class Spel {
         input.reset();
     }
     public void berekenSnelheid() {
-        snelheid = (1.00/(input.getTijd()/1000));
+        snelheid = (0.60/((input.getTijd()/1000)*200));
+        snelheidTekst = df.format(snelheid);
+    }
+    public String getSnelheidTekst() {
+        return snelheidTekst;
     }
     public void tick() {
         berekenSnelheid();
         scoreupdate();
+        input.arduino();
     }
     public void scoreupdate() {
-        if (input.isActief() == false && input.getTijd() > 0) {
+        if (input.isActief() == false && input.getTijd() > 0 && spelers.size() == 6) {
         if (input.getKegel1() == 1) {
             kegel1 = 2;
             } else {
@@ -92,5 +96,8 @@ public class Spel {
         spelers.get(input.getSpelerNummer()).getWorpen().add(score);
         spelers.get(input.getSpelerNummer()).setTotaalscore(score);
         }
+    }
+    public Input getInput() {
+        return input;
     }
 }

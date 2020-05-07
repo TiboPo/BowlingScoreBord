@@ -1,15 +1,13 @@
-//dit bestand vervangen door Jarduino.
 package Bowlingscorebord;
 /**
  *
  * @author tibop
  */
 import java.util.Random;
-import org.sintef.jarduino.DigitalPin;
-import org.sintef.jarduino.DigitalState;
-import org.sintef.jarduino.JArduino;
-import org.sintef.jarduino.PinMode;
-public class Input extends JArduino {
+import com.fazecast.jSerialComm.*;
+import java.util.Scanner;
+
+public class Input {
     double tijd;
     int kegel1;
     int kegel2;
@@ -20,9 +18,9 @@ public class Input extends JArduino {
     boolean actief;
     int spelerNummer;
     int worpen;
+    Scanner data;
 
-    public Input(String port) {
-        super(port);
+    public Input() {
         tijd = 0;
         kegel1 = 0;
         kegel2 = 0;
@@ -30,44 +28,36 @@ public class Input extends JArduino {
         kegel4 = 0;
         kegel5 = 0;
         kegel6 = 0;
-        spelerNummer = -1;
+        spelerNummer = 0;
         worpen = 0;
-    }
-    @Override
-    protected void setup() {
-        pinMode(DigitalPin.PIN_11, PinMode.INPUT);
-        pinMode(DigitalPin.PIN_12, PinMode.INPUT);
-        pinMode(DigitalPin.PIN_13, PinMode.INPUT);
-    }
-    @Override
-    protected void loop() {
-        DigitalState knop1 = digitalRead(DigitalPin.PIN_11);
-        DigitalState knop2 = digitalRead(DigitalPin.PIN_12); 
-        DigitalState sensor = digitalRead(DigitalPin.PIN_13);
-        if (knop1 == HIGH) {
-            actief = true;
-            tijd = 0;
-            worpen++;
-            if (worpen == 4) {
-                spelerNummer++;
-                worpen = 1;
-            }
-        }
-        if (knop2 == HIGH) {
-            actief = false;
-            if (sensor == HIGH) {
-                kegel3 = 1;
+        actief = false;
+        // Arduino poortconfiguratie
+        SerialPort ports[] = SerialPort.getCommPorts();
+        SerialPort port = ports[1]; //indien geen data hier nummer veranderen
+        port.openPort();
+        port.setComPortTimeouts(SerialPort.TIMEOUT_READ_SEMI_BLOCKING, 0, 0);
+        data = new Scanner(port.getInputStream());
+}
+
+    public void arduino() {
+        // Seriële data Arduino omzetten in variabelen
+        if (data.hasNextLine()) {
+            String var = data.nextLine();
+            String var1 = var.substring(var.indexOf("t") + 1, var.indexOf("s"));
+            String var2 = var.substring(var.indexOf("s") + 1, var.indexOf("w"));
+            String var3 = var.substring(var.indexOf("w") + 1, var.indexOf("n"));
+            String var4 = var.substring(var.indexOf("n") + 1, var.indexOf("k"));
+            String var5 = var.substring(var.indexOf("k") + 1, var.indexOf("/"));
+            tijd = Double.valueOf(var1);
+            kegel3 = Integer.parseInt(var5);
+            worpen = Integer.parseInt(var3);
+            spelerNummer = Integer.parseInt(var4);
+            if (Integer.parseInt(var2) == 1) {
+                actief = true;
             } else {
-                kegel3 = 0;
+                actief = false;
             }
         }
-        if (actief = true) {
-            tijd++;
-        }
-        if (spelerNummer == 6) {
-            spelerNummer = 0;
-        }
-        delay(1);
     }
     public double getTijd() {
         return tijd;
