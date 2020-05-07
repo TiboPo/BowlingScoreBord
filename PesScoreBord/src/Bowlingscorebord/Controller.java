@@ -4,17 +4,14 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.Timer;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.KeyEvent;
-import javafx.scene.layout.AnchorPane;
-import java.util.Scanner;
+import javafx.scene.text.Text;
 
 public class Controller {
-    private Spel model;
-    private Input input;
-    private String tkegel;
-    private int tkegel1,tkegel2,tkegel3,tkegel4,tkegel5;
+
     @FXML
     private ResourceBundle resources;
 
@@ -23,6 +20,33 @@ public class Controller {
 
     @FXML
     private ImageView snelheid;
+
+    @FXML
+    private Text naamTekst;
+
+    @FXML
+    private TextField naam;
+
+    @FXML
+    private Button okKnop;
+
+    @FXML
+    private Text speler2;
+
+    @FXML
+    private Text speler1;
+
+    @FXML
+    private Text speler3;
+
+    @FXML
+    private Text speler4;
+
+    @FXML
+    private Text speler5;
+
+    @FXML
+    private Text speler6;
 
     @FXML
     private Label s1f1w1;
@@ -721,87 +745,70 @@ public class Controller {
     private Label s6f10w3;
     
     @FXML
-    private AnchorPane bord;
+    private Button resetKnop;
+
+    @FXML
+    private Label snelheidLabel;
+
     
+    Spel model;
+    Input input;
+    
+    @FXML
     void initialize() {
-        bord.setFocusTraversable(true);
+        resetKnop.setVisible(false);
+        okKnop.setOnMousePressed(evt -> model.addSpeler(naam.getText()));
+        resetKnop.setOnMousePressed(evt -> reset());
       
     }
 
     public void setModel(Spel model) {
-        //model.startSpel();
-        //preBowl();
         this.model = model;
         Timertask timertask = new Timertask(model,this);
         Timer t = new Timer();
-        t.scheduleAtFixedRate(timertask,0,10000);
+        t.scheduleAtFixedRate(timertask,0,50);
     }
     public void update() {
-        //System.out.println("controller update");
-         
+        spelerUpdate();
+        frameUpdate();
     }
-  public void preBowl(){
-  System.out.println("hoeveel spelers (max 6) ");
-   Scanner mScanner = new Scanner(System.in);
-   String l = mScanner.nextLine();
-  int hvlSpeler =   Integer.parseInt(l);
-    for (int i = 0; i < hvlSpeler; i++) {
-       System.out.println("naam van speler  ?");
-        String nieuwSpeler = mScanner.nextLine();
-        model.addSpeler(nieuwSpeler);
+    public void spelerUpdate() {
+        if (model.getSpelers().size() == 6) {
+            speler1.setText(model.getSpelers().get(0).getNaam());
+            speler2.setText(model.getSpelers().get(1).getNaam());
+            speler3.setText(model.getSpelers().get(2).getNaam());
+            speler4.setText(model.getSpelers().get(3).getNaam());
+            speler5.setText(model.getSpelers().get(4).getNaam());
+            speler6.setText(model.getSpelers().get(5).getNaam());
+            naam.setVisible(false);
+            okKnop.setVisible(false);
+            naamTekst.setVisible(false);
+            resetKnop.setVisible(true);
+        } else {
+            speler1.setText("");
+            speler2.setText("");
+            speler3.setText("");
+            speler4.setText("");
+            speler5.setText("");
+            speler6.setText("");
+        }
     }
-   }
-    
-    public void bowl(){
-    System.out.println("kegel 1 ? ");
-    Scanner myScanner = new Scanner(System.in);
-    
-    System.out.println("kegel 1 ? ");
-    tkegel = myScanner.nextLine();
-    tkegel1 =   Integer.parseInt(tkegel);
-     
-    System.out.println("kegel 2 ? ");
-     tkegel = myScanner.nextLine();
-    tkegel2 =   Integer.parseInt(tkegel);
-     
-    System.out.println("kegel 3 ? ");
-     tkegel = myScanner.nextLine();
-    tkegel3 =   Integer.parseInt(tkegel);
-     
-    System.out.println("kegel 4 ? ");
-     tkegel = myScanner.nextLine();
-    tkegel4 =   Integer.parseInt(tkegel);
-     
-    System.out.println("kegel 5 ? ");
-     tkegel = myScanner.nextLine();
-    tkegel5 =   Integer.parseInt(tkegel);
-     System.out.println(tkegel1);
-    
+    public void reset() {
+        naam.setVisible(true);
+        okKnop.setVisible(true);
+        naamTekst.setVisible(true);
+        resetKnop.setVisible(false);
+        model.resetSpel();
     }
-
-    public int getTkegel1() {
-        return tkegel1;
+    public void frameUpdate() {
+        if (input.isActief() == false && model.getSpelers().size() == 6) {
+            snelheidLabel.setText(model.getSnelheid() + " m/s");
+            s1f1w1.setText(model.getSpelers().get(0).getWorpen().get(0).toString());
+            s1f1w2.setText(model.getSpelers().get(0).getWorpen().get(1).toString()); 
+            s1f1w3.setText(model.getSpelers().get(0).getWorpen().get(2).toString());
+            s1f1.setText(model.getSpelers().get(0).getWorpen().get(3).toString());
+            s1.setText(Integer.toString(model.getSpelers().get(0).getTotaalscore()));
+        }
     }
-
-    public int getTkegel2() {
-        return tkegel2;
-    }
-
-    public int getTkegel3() {
-        return tkegel3;
-    }
-
-    public int getTkegel4() {
-        return tkegel4;
-    }
-
-    public int getTkegel5() {
-        return tkegel5;
-    }
-
-    public ImageView getSnelheid() {
-        return snelheid;
-    }
-    
 }
         

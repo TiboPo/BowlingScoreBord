@@ -25,6 +25,9 @@ public class Speler {
     public int getTotaalscore() {
         return totaalscore;
     }
+    public void setTotaalscore(int score) {
+        totaalscore = score+totaalscore;
+    }
 
     public ArrayList getWorpen() {
         return worpen;
@@ -32,11 +35,5 @@ public class Speler {
 
     public String getNaam() {
         return naam;
-    }
-    
-    public void resetspeler() {
-        totaalscore = 0;
-        naam = null;
-        worpen = null;
     }
 }

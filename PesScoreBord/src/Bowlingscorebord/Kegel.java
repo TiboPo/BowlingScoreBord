@@ -11,12 +11,10 @@ package Bowlingscorebord;
  */
 public class Kegel {
     private int punten;
-    private boolean omver;
     private int kegelnummer;
 
     public Kegel(int punten, int kegelnummer) {
         this.punten = punten;
-        omver = false;
         this.kegelnummer = kegelnummer;
     }
 
@@ -24,18 +22,7 @@ public class Kegel {
         return punten;
     }
 
-    public boolean isOmver() {
-        return omver;
-    }
-
     public int getKegelnummer() {
         return kegelnummer;
-    }
-
-    public void setOmver(boolean omver) {
-        this.omver = omver;
-    }
-    public void resetKegels() {
-        omver = false;
     }
 }

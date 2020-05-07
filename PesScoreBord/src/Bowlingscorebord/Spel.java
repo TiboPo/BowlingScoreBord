@@ -6,6 +6,7 @@
 package Bowlingscorebord;
 
 import java.util.ArrayList;
+import org.sintef.jarduino.JArduino;
 
 
 /**
@@ -13,35 +14,24 @@ import java.util.ArrayList;
  * @author dries
  */
 public class Spel {
-    private boolean actief;
     private ArrayList<Speler> spelers;
-    private ArrayList<Kegel> kegels;
+    private int kegel1;
+    private int kegel2;
+    private int kegel3;
+    private int kegel4;
+    private int kegel5;
+    private int score;
     private double snelheid;
-    private Controller input;
+    private Input input;
 
     public Spel() {
-        actief = false;
         snelheid = 0.0;
-        ArrayList<Speler> spelers = new ArrayList();
-        ArrayList<Kegel> kegels = new ArrayList();
-        Kegel kegel1 = new Kegel(5, 1);
-        Kegel kegel2 = new Kegel(3, 2);
-        Kegel kegel3 = new Kegel(3, 3);
-        Kegel kegel4 = new Kegel(2, 4);
-        Kegel kegel5 = new Kegel(2, 5);
-        kegels.add(kegel1);
-        kegels.add(kegel2);
-        kegels.add(kegel3);
-        kegels.add(kegel4);
-        kegels.add(kegel5);
-        
+        input = new Input("COM3");
+        JArduino arduino = new Input("COM3");
+        arduino.runArduinoProcess();
+        spelers = new ArrayList();
     }
 
-    public boolean isActief() {
-        return actief;
-    }
-
-    
     public void addSpeler(String naam){
         Speler speler = new Speler(naam);
         spelers.add(speler);
@@ -54,23 +44,53 @@ public class Spel {
         return snelheid;
     }
 
-    public void startSpel() {
-        
-        actief = true;
-    }
-    
     public void resetSpel() {
-        actief = false;
-        for(Speler speler:spelers) {
-            speler.resetspeler();
-        } 
+        spelers.clear();
+        snelheid = 0.0;
+        input.reset();
     }
-
-    public void setSnelheid(double snelheid) {
-        this.snelheid = snelheid;
-    }  
+    public void berekenSnelheid() {
+        snelheid = (1.00/(input.getTijd()/1000));
+    }
     public void tick() {
-       // System.out.println("tick spel");
+        berekenSnelheid();
+        scoreupdate();
     }
-    
+    public void scoreupdate() {
+        if (input.isActief() == false && input.getTijd() > 0) {
+        if (input.getKegel1() == 1) {
+            kegel1 = 2;
+            } else {
+            kegel1 = 0;
+            }
+        if (input.getKegel2() == 1) {
+            kegel2 = 3;
+            } else {
+            kegel2 = 0;
+            }
+        if (input.getKegel3() == 1) {
+            kegel3 = 5;
+            } else {
+            kegel3 = 0;
+            }
+        if (input.getKegel4() == 1) {
+            kegel4 = 3;
+            } else {
+            kegel4 = 0;
+            }
+        if (input.getKegel5() == 1) {
+            kegel5 = 2;
+            } else {
+            kegel5 = 0;
+        }
+        //if (input.getTkegel1() == 1 && input.getTkegel2() == 1 && input.getTkegel3() == 1 && input.getTkegel4() == 1 && input.getTkegel5() == 1) {
+            //score = 15 +;
+            //} else if ({
+            //kegel5 = 0;
+        //} else {
+        score = kegel1 + kegel2+ kegel3 + kegel4 + kegel5;
+        spelers.get(input.getSpelerNummer()).getWorpen().add(score);
+        spelers.get(input.getSpelerNummer()).setTotaalscore(score);
+        }
+    }
 }

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -14,33 +16,39 @@
             <Image url="@../bowlingachtergrond.png" />
          </image>
       </ImageView>
-      <AnchorPane fx:id="bord" layoutX="8.0" layoutY="8.0" prefHeight="720.0" prefWidth="1280.0" />
-      <Text layoutX="83.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Speler 2" wrappingWidth="216.53675842285156">
+      <Text fx:id="naamTekst" fill="WHITE" layoutX="67.0" layoutY="630.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Voer uw namen in" wrappingWidth="225.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <TextField fx:id="naam" layoutX="67.0" layoutY="636.0" prefHeight="32.0" prefWidth="225.0" promptText="Naam" />
+      <Button fx:id="okKnop" layoutX="299.0" layoutY="636.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="54.0" text="OK" />
+      <Text fx:id="speler2" fill="WHITE" layoutX="83.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="216.53675842285156">
          <font>
             <Font size="31.0" />
          </font>
       </Text>
-      <Text layoutX="83.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Speler 1" wrappingWidth="216.53675842285156">
+      <Text fx:id="speler1" fill="WHITE" layoutX="83.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="216.53675842285156">
          <font>
             <Font size="31.0" />
          </font>
       </Text>
-      <Text layoutX="83.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Speler 3" wrappingWidth="216.53675842285156">
+      <Text fx:id="speler3" fill="WHITE" layoutX="83.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="216.53675842285156">
          <font>
             <Font size="31.0" />
          </font>
       </Text>
-      <Text layoutX="83.0" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Speler 4" wrappingWidth="216.53675842285156">
+      <Text fx:id="speler4" fill="WHITE" layoutX="83.0" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="216.53675842285156">
          <font>
             <Font size="31.0" />
          </font>
       </Text>
-      <Text layoutX="83.0" layoutY="458.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Speler 5" wrappingWidth="216.53675842285156">
+      <Text fx:id="speler5" fill="WHITE" layoutX="83.0" layoutY="458.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="216.53675842285156">
          <font>
             <Font size="31.0" />
          </font>
       </Text>
-      <Text layoutX="83.0" layoutY="552.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Speler 6" wrappingWidth="216.53675842285156">
+      <Text fx:id="speler6" fill="WHITE" layoutX="83.0" layoutY="552.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="216.53675842285156">
          <font>
             <Font size="31.0" />
          </font>
@@ -1303,6 +1311,12 @@
       <Label fx:id="s6f10w3" layoutX="1066.0" layoutY="539.0" prefHeight="28.0" prefWidth="29.0" textFill="WHITE">
          <font>
             <Font size="22.0" />
+         </font>
+      </Label>
+      <Button fx:id="resetKnop" layoutX="67.0" layoutY="636.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="85.0" text="Reset spel" />
+      <Label fx:id="snelheidLabel" alignment="CENTER" layoutX="608.0" layoutY="615.0" prefHeight="62.0" prefWidth="132.0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="26.0" />
          </font>
       </Label>
    </children>
