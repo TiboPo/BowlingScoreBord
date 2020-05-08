@@ -832,13 +832,14 @@ public class Controller {
         s1f1.setText(model.getSpelers().get(0).getWorpen().get(3).toString());
         }
         eindScore1.setText(Integer.toString(model.getSpelers().get(0).getTotaalscore()));
-        } else {
-            snelheidLabel.setText("");
+        } else if (model.getSpelers().isEmpty()) {
             s1f1w1.setText("");
             s1f1w2.setText("");
             s1f1w3.setText("");
             s1f1.setText("");
-            eindScore1.setText("");
+            eindScore1.setText("");     
+        } else {
+            snelheidLabel.setText("");
         }
     }
 }

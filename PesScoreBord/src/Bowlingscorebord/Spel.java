@@ -24,11 +24,13 @@ public class Spel {
     private String snelheidTekst;
     private Input input;
     private static DecimalFormat df = new DecimalFormat("#.##");
+    private int teller;
 
     public Spel() {
         snelheid = 0.0;
         input = new Input();
         spelers = new ArrayList();
+        int teller = 0;
     }
 
     public void addSpeler(String naam){
@@ -92,9 +94,14 @@ public class Spel {
             //} else if ({
             //kegel5 = 0;
         //} else {
+        if (teller == 0) {
         score = kegel1 + kegel2+ kegel3 + kegel4 + kegel5;
         spelers.get(input.getSpelerNummer()).getWorpen().add(score);
         spelers.get(input.getSpelerNummer()).setTotaalscore(score);
+        }
+        teller++;
+        } else {
+            teller = 0;
         }
     }
     public Input getInput() {
