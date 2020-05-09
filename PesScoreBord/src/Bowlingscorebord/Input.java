@@ -101,4 +101,7 @@ public class Input {
         return spelerNummer;
     }
 
+    public int getWorpen(){
+        return worpen;
+    }
 }

@@ -25,6 +25,7 @@ public class Spel {
     private Input input;
     private static DecimalFormat df = new DecimalFormat("#.##");
     private int teller;
+    private boolean kom1,kom2,kom3,kom4,kom5;
 
     public Spel() {
         snelheid = 0.0;
@@ -64,44 +65,104 @@ public class Spel {
     }
     public void scoreupdate() {
         if (input.isActief() == false && input.getTijd() > 0 && spelers.size() == 6) {
-        if (input.getKegel1() == 1) {
+        if (input.getWorpen() == 0) {
+            kom1 = false;
+           kom2 = false;
+           kom3 = false;
+           kom4 = false;
+           kom5 = false;
+            
+           kegel1 = 0;
+           kegel2 = 0;
+           kegel3 = 0;
+           kegel4 = 0;
+           kegel5 = 0;
+       }
+            if (kegel1 != 2) {
+            if (input.getKegel1() == 1) {
             kegel1 = 2;
+            kom1 = true;
             } else {
             kegel1 = 0;
             }
+            }
+            if (kegel2 != 3) {
         if (input.getKegel2() == 1) {
             kegel2 = 3;
+            kom2 = true;
             } else {
             kegel2 = 0;
             }
+            }
+            if (kegel3 != 5) {
         if (input.getKegel3() == 1) {
             kegel3 = 5;
+            kom3 = true;
             } else {
             kegel3 = 0;
             }
+            }
+            if (kegel4 != 3) {
         if (input.getKegel4() == 1) {
             kegel4 = 3;
+            kom4 = true;
             } else {
             kegel4 = 0;
             }
+            }
+            if (kegel5 != 2) {
         if (input.getKegel5() == 1) {
             kegel5 = 2;
+            kom5 = true;
             } else {
             kegel5 = 0;
         }
-        //if (input.getTkegel1() == 1 && input.getTkegel2() == 1 && input.getTkegel3() == 1 && input.getTkegel4() == 1 && input.getTkegel5() == 1) {
-            //score = 15 +;
-            //} else if ({
-            //kegel5 = 0;
-        //} else {
+            }
         if (teller == 0) {
-        score = kegel1 + kegel2+ kegel3 + kegel4 + kegel5;
+        if(kom1){
+        score = kegel1 + score;
+        kom1 =false;
+        }
+        if(kom2){
+        score = kegel2 + score;
+        kom2 =false;
+        }
+        if(kom3){
+        score = kegel3 + score;
+        kom3 =false;
+        }
+        if(kom4){
+        score = kegel4 + score;
+        kom4 =false;
+        }
+        if(kom5){
+        score = kegel5 + score;
+        kom5 =false;
+        }
         spelers.get(input.getSpelerNummer()).getWorpen().add(score);
         spelers.get(input.getSpelerNummer()).setTotaalscore(score);
+        if(spelers.get(input.getSpelerNummer()).getWorpen().size() == 3){
+        
+        
+        if(spelers.get(input.getSpelerNummer()).getStrike()){
+           
+            spelers.get(input.getSpelerNummer()).getWorpen().add("X");
+        }
+         if(spelers.get(input.getSpelerNummer()).getSpare()){
+             spelers.get(input.getSpelerNummer()).getWorpen().add("/");
+        }
+         if(spelers.get(input.getSpelerNummer()).getStrike() == spelers.get(input.getSpelerNummer()).getSpare()){
+             spelers.get(input.getSpelerNummer()).getWorpen().add("");
+         }
+        } 
+        score = 0;
+        
         }
         teller++;
         } else {
             teller = 0;
+            
+            
         }
     }
     public Input getInput() {

@@ -55,4 +55,10 @@ public class Speler {
     public String getNaam() {
         return naam;
     }
+    public boolean getStrike(){
+        return strike;
+    }
+     public boolean getSpare(){
+        return spare;
+    }
 }
