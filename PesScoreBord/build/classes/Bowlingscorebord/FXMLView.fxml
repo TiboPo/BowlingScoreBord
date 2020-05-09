@@ -838,7 +838,7 @@
             <Font size="22.0" />
          </font>
       </Label>
-      <Label fx:id="s4f6w3" layoutX="799.0" layoutY="357.0" prefHeight="28.0" prefWidth="29.0" textFill="WHITE">
+      <Label fx:id="s4f7w3" layoutX="799.0" layoutY="357.0" prefHeight="28.0" prefWidth="29.0" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
@@ -883,7 +883,7 @@
             <Font size="22.0" />
          </font>
       </Label>
-      <Label fx:id="s4f1àw2" layoutX="1026.0" layoutY="357.0" prefHeight="28.0" prefWidth="29.0" textFill="WHITE">
+      <Label fx:id="s4f10w2" layoutX="1026.0" layoutY="357.0" prefHeight="28.0" prefWidth="29.0" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>

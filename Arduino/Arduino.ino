@@ -37,7 +37,7 @@ void loop() {
         if (spelerNummer == 6) {
             spelerNummer = 0;
         }
-        delay(200);
+        delay(250);
         Serial.print("t"+String(tijd));
         Serial.print("s"+String(actief));
         Serial.print("w"+String(worpen));

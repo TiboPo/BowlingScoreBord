@@ -65,13 +65,7 @@ public class Spel {
     }
     public void scoreupdate() {
         if (input.isActief() == false && input.getTijd() > 0 && spelers.size() == 6) {
-        if (input.getWorpen() == 0) {
-            kom1 = false;
-           kom2 = false;
-           kom3 = false;
-           kom4 = false;
-           kom5 = false;
-            
+        if (input.getWorpen() == 1 && teller == 0) {
            kegel1 = 0;
            kegel2 = 0;
            kegel3 = 0;
@@ -117,7 +111,7 @@ public class Spel {
             } else {
             kegel5 = 0;
         }
-            }
+        }
         if (teller == 0) {
         if(kom1){
         score = kegel1 + score;
@@ -141,28 +135,22 @@ public class Spel {
         }
         spelers.get(input.getSpelerNummer()).getWorpen().add(score);
         spelers.get(input.getSpelerNummer()).setTotaalscore(score);
-        if(spelers.get(input.getSpelerNummer()).getWorpen().size() == 3){
-        
-        
+        if(spelers.get(input.getSpelerNummer()).getWorpen().size() == 3 | spelers.get(input.getSpelerNummer()).getWorpen().size() == 7 | spelers.get(input.getSpelerNummer()).getWorpen().size() == 11 | spelers.get(input.getSpelerNummer()).getWorpen().size() == 15 | spelers.get(input.getSpelerNummer()).getWorpen().size() == 19 | spelers.get(input.getSpelerNummer()).getWorpen().size() == 23 | spelers.get(input.getSpelerNummer()).getWorpen().size() == 27 | spelers.get(input.getSpelerNummer()).getWorpen().size() == 31 | spelers.get(input.getSpelerNummer()).getWorpen().size() == 35 | spelers.get(input.getSpelerNummer()).getWorpen().size() == 39 ){
         if(spelers.get(input.getSpelerNummer()).getStrike()){
-           
             spelers.get(input.getSpelerNummer()).getWorpen().add("X");
         }
-         if(spelers.get(input.getSpelerNummer()).getSpare()){
-             spelers.get(input.getSpelerNummer()).getWorpen().add("/");
+        if(spelers.get(input.getSpelerNummer()).getSpare()){
+            spelers.get(input.getSpelerNummer()).getWorpen().add("/");
         }
-         if(spelers.get(input.getSpelerNummer()).getStrike() == spelers.get(input.getSpelerNummer()).getSpare()){
-             spelers.get(input.getSpelerNummer()).getWorpen().add("");
-         }
-        } 
+        if(spelers.get(input.getSpelerNummer()).getStrike() == spelers.get(input.getSpelerNummer()).getSpare()){
+            spelers.get(input.getSpelerNummer()).getWorpen().add("");
+        }
+        }
         score = 0;
-        
-        }
         teller++;
+        }
         } else {
             teller = 0;
-            
-            
         }
     }
     public Input getInput() {
