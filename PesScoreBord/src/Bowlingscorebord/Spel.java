@@ -52,7 +52,7 @@ public class Spel {
         input.reset();
     }
     public void berekenSnelheid() {
-        snelheid = (0.60/((input.getTijd()/1000)*200));
+        snelheid = (0.60/((input.getTijd()/1000)*250));
         snelheidTekst = df.format(snelheid);
     }
     public String getSnelheidTekst() {

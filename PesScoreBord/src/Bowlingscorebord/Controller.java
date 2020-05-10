@@ -1,7 +1,6 @@
 package Bowlingscorebord;
 
 import com.fazecast.jSerialComm.SerialPort;
-import java.util.ArrayList;
 import java.util.Timer;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;

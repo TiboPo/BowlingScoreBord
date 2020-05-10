@@ -5,9 +5,7 @@ package Bowlingscorebord;
  */
 import java.util.Random;
 import com.fazecast.jSerialComm.*;
-import java.util.ArrayList;
 import java.util.Scanner;
-import javafx.collections.ObservableList;
 
 public class Input {
     double tijd;
