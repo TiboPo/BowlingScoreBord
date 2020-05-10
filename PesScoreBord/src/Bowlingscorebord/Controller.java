@@ -1766,6 +1766,7 @@ public class Controller {
             s6f10w2.setText("");
             s6f10w3.setText("");
             s6f103.setText("");
+            snelheidLabel.setText("");
             
             eindScore1.setText("");
             eindScore2.setText("");
