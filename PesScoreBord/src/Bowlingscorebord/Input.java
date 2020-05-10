@@ -5,7 +5,9 @@ package Bowlingscorebord;
  */
 import java.util.Random;
 import com.fazecast.jSerialComm.*;
+import java.util.ArrayList;
 import java.util.Scanner;
+import javafx.collections.ObservableList;
 
 public class Input {
     double tijd;
@@ -18,9 +20,11 @@ public class Input {
     boolean actief;
     int spelerNummer;
     int worpen;
+    int teller;
     Scanner data;
+    SerialPort port;
 
-    public Input() {
+    public Input () {
         tijd = 0;
         kegel1 = 0;
         kegel2 = 0;
@@ -28,19 +32,21 @@ public class Input {
         kegel4 = 0;
         kegel5 = 0;
         kegel6 = 0;
+        teller = 0;
         spelerNummer = 0;
         worpen = 0;
         actief = false;
-        // Arduino poortconfiguratie
-        SerialPort ports[] = SerialPort.getCommPorts();
-        SerialPort port = ports[0]; //indien geen data hier nummer veranderen
+        port = SerialPort.getCommPort("");
+        data = new Scanner("");
+}
+    public void arduinoInit(String poort) {
+        port = SerialPort.getCommPort​(poort);
         port.openPort();
         port.setComPortTimeouts(SerialPort.TIMEOUT_READ_SEMI_BLOCKING, 0, 0);
         data = new Scanner(port.getInputStream());
-}
-
+    }
     public void arduino() {
-        // Seriële data Arduino omzetten in variabelen
+        if (port.isOpen()) {
         if (data.hasNextLine()) {
             String var = data.nextLine();
             String var1 = var.substring(var.indexOf("t") + 1, var.indexOf("s"));
@@ -58,7 +64,8 @@ public class Input {
                 actief = false;
             }
         }
-    }
+        } 
+    } 
     public double getTijd() {
         return tijd;
     }
@@ -104,4 +111,5 @@ public class Input {
     public int getWorpen(){
         return worpen;
     }
+
 }

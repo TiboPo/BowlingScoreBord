@@ -1,13 +1,20 @@
 package Bowlingscorebord;
 
+import com.fazecast.jSerialComm.SerialPort;
+import java.util.ArrayList;
 import java.util.Timer;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 
 public class Controller {
+
+    @FXML
+    private ComboBox<String> combo;
 
     @FXML
     private Text naamTekst;
@@ -792,13 +799,18 @@ public class Controller {
     private Label s4f7w3;
      
     Spel model;
+    int teller=0;
     
     @FXML
     void initialize() {
         resetKnop.setVisible(false);
         okKnop.setOnMousePressed(evt -> model.addSpeler(naam.getText()));
         resetKnop.setOnMousePressed(evt -> reset());
-      
+        ObservableList<String> poorten = combo.getItems();
+        SerialPort ports[] = SerialPort.getCommPorts();
+        for(SerialPort port : ports) {
+            poorten.add(port.getSystemPortName());
+        }
     }
 
     public void setModel(Spel model) {
@@ -810,6 +822,13 @@ public class Controller {
     public void update() {
         spelerUpdate();
         frameUpdate();
+        String poort = combo.getSelectionModel().getSelectedItem();
+        if (poort != null) {
+            if (teller == 0) {
+            model.getInput().arduinoInit(poort);
+            teller++;
+            }
+        }
     }
     public void spelerUpdate() {
         if (model.getSpelers().size() == 6) {
