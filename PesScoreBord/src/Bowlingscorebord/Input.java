@@ -33,7 +33,7 @@ public class Input {
         actief = false;
         // Arduino poortconfiguratie
         SerialPort ports[] = SerialPort.getCommPorts();
-        SerialPort port = ports[1]; //indien geen data hier nummer veranderen
+        SerialPort port = ports[0]; //indien geen data hier nummer veranderen
         port.openPort();
         port.setComPortTimeouts(SerialPort.TIMEOUT_READ_SEMI_BLOCKING, 0, 0);
         data = new Scanner(port.getInputStream());

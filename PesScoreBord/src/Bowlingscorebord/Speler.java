@@ -12,7 +12,7 @@ import java.util.ArrayList;
  * @author dries
  */
 public class Speler {
-    private int totaalscore,vorigeScore,bonus = 0;
+    private int totaalscore,vorigeScore,bonus = 0,teller = 0;
     private ArrayList worpen;
     private String naam;
     private boolean strike = false,spare = false;
@@ -29,20 +29,31 @@ public class Speler {
     }
     public void setTotaalscore(int score) {
       
+        if(teller == 3){
+          teller = 0;
+      }
+        teller++;
+
+      
         totaalscore = score+totaalscore;
-        
+        if(score > 0 ){
         if(bonus > 0){
             totaalscore = score + totaalscore;
+            if(strike && bonus == 1){
+                strike = false;
+            }
+                spare = false;
             bonus--;
-            strike = false;
-            spare = false;
         }
-          if (score == 15){
+      }
+          if (score == 15 && teller == 1){
             bonus = 2; // strike
+            System.out.println("strike");
             strike = true;
         }
-        if(vorigeScore + score == 15){
+        if(vorigeScore + score == 15 && strike == false && teller == 2){
             bonus = 1; //spare
+            System.out.println("spare");
             spare = true;
         }
         vorigeScore = score;
