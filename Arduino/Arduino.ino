@@ -3,6 +3,7 @@ int spelerNummer = 0;
 int tijd = 0;
 int actief = 0;
 int kegel3 = 0;
+int teller = 0;
 
 void setup() {
   Serial.begin(9600);
@@ -15,16 +16,20 @@ void loop() {
   int knop2 = digitalRead(A4); 
   int sensor = digitalRead(A0);
         if (knop1 == 1) {
-            actief = 1;
-            tijd = 0;
-            worpen++;
-            if (worpen == 4) {
+            if (teller == 0) {
+              actief = 1;
+              tijd = 0;
+              worpen++;
+              if (worpen == 4) {
                 spelerNummer++;
                 worpen = 1;
+              }
+              teller++;
             }
         }
         if (knop2 == 1) {
             actief = 0;
+            teller = 0;
             if (sensor == 1) {
                 kegel3 = 1;
             } else {
@@ -37,7 +42,7 @@ void loop() {
         if (spelerNummer == 6) {
             spelerNummer = 0;
         }
-        delay(250);
+        delay(50);
         Serial.print("t"+String(tijd));
         Serial.print("s"+String(actief));
         Serial.print("w"+String(worpen));
